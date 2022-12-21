@@ -4,13 +4,14 @@ body{
     font-weight: 400;
 }
 
-h1, p{
+h1, .mission{
     color: #FDF6FA;
     font-size: 18px;
     position: absolute;
     top: 70px;
     left: 15px;
     text-shadow:  1px 1px 0 black;
+    font-weight: 600;
 }
 
 h1 {
@@ -40,6 +41,7 @@ h1 {
     margin: 40px auto 30px auto;
     display: flex;
     justify-content: space-around;
+    border-bottom: 1px solid #D2D2D2;
 }
 
 /* Products */
@@ -71,14 +73,54 @@ font-weight: 300;
 }
 
 .add-btn {
-    margin-top: 20px;
+    margin-top: 15px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-left: 50px;
-    border: 1.5px solid #DEDEDE;;
+    border: 1.5px solid #DEDEDE;
+    outline: none;
 }
 
 .add-btn:hover {
     border-color: black;
 }
+
+/* Order */
+.order-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: columm;
+    margin: 0px auto;
+    width: 508px;
+}
+
+.order-title {
+text-align: center;
+font-size: 28px;
+font-weight: 600;
+}
+
+.order-items{
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.remove-btn {
+    font-size: 12px;
+    color: #BBBBBB;
+    margin-bottom: 5px;
+    margin-right: 260px;
+    margin-top: 25px;
+
+}
+
+.order-price{
+    margin-bottom: 5px;
+    
+}
+
+
+

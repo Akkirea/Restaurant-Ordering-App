@@ -7,7 +7,7 @@ export const menuArray = [
         emoji: "🥗"
     },
     {
-        name: "Beyond Beef Burger(v)",
+        name: "Beyond Burger",
         ingredients: ["beyond-meat", "cheese(v)", "lettuce", "tomato"],
         price: 9,
         emoji: "🍔",
