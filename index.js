@@ -7,6 +7,9 @@ let orderArray = []
 document.addEventListener('click', function(e){
     if(e.target.dataset.add) {
         addOrderItem(e.target.dataset.add)
+    } else if (e.target.dataset.remove) {
+        removeItemOrder(e.target.dataset.remove)
+
     }
 })
 
@@ -56,12 +59,18 @@ function addOrderItem(selectIdItem) {
     })[0]
     orderArray.push(targetItemObj)
     renderOrder()
+
+    if (orderArray!=0){
+        document.getElementById('order-container').classList.remove('hidden')
+    }
 }
+
 
 
 function getOrderHtml() {
     let totalPrice = 0
     let orderHtml = 
+
     `
     <h2 class="order-title">Your Order</h2> 
     `
@@ -69,7 +78,7 @@ function getOrderHtml() {
     orderArray.forEach(function(orderItem, index){
         orderHtml +=
         `
-        <div class="order-container">
+        <div class="order-line">
             <div>
             <h3 class="order-items">${orderItem.name}</h3> 
             </div>
@@ -86,9 +95,30 @@ function getOrderHtml() {
 
         totalPrice += orderItem.price
     })
-    return orderHtml
+
+        orderHtml +=
+        `
+        <hr>
+        <div class="total-section">
+            <h3>Total Price:</h3>
+            <h3 class="total-price">$${totalPrice}.00</h3>
+        </div>
+            <button class="order-btn" id="order-btn">Complete Order</button>
+        `
+        return orderHtml
+
 }
+
 
 function renderOrder() {
     document.getElementById('order-container').innerHTML = getOrderHtml()
+}
+
+function removeItemOrder(index){
+orderArray.splice(index,1)
+renderOrder()
+
+if (orderArray.length === 0){
+    document.getElementById('order-container').classList.add('hidden')
+    }
 }
