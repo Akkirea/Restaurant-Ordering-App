@@ -10,6 +10,8 @@ document.addEventListener('click', function(e){
     } else if (e.target.dataset.remove) {
         removeItemOrder(e.target.dataset.remove)
 
+    } else if (e.target.id === 'order-btn') {
+        openPaymentModal()
     }
 })
 
@@ -121,4 +123,8 @@ renderOrder()
 if (orderArray.length === 0){
     document.getElementById('order-container').classList.add('hidden')
     }
+}
+
+function openPaymentModal(){
+document.getElementById('payment-modal').style.display = "inline"
 }

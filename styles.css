@@ -157,7 +157,36 @@ font-weight: 600;
     border: none;
     border-radius: 3px;
     margin-left: 46px;
+    cursor: pointer;
 }
 
+.order-btn:active{
+    border: 2px solid grey;
+    color: grey;
+}
 
+/* Payment Modal */
 
+.payment-modal {
+    display: none;
+    width: 524px;
+    height: 542px;
+    position: fixed;
+    margin: auto;
+    background-color: yellow;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.modal-close-btn{
+    margin-right: 500px;
+}
+
+.modal-inner{
+    color: black;
+}
