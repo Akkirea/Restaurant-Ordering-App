@@ -12,6 +12,9 @@ document.addEventListener('click', function(e){
 
     } else if (e.target.id === 'order-btn') {
         openPaymentModal()
+
+    } else if (e.target.id === 'modal-close-btn') {
+        document.getElementById('payment-modal').style.display = "none"
     }
 })
 
@@ -128,3 +131,4 @@ if (orderArray.length === 0){
 function openPaymentModal(){
 document.getElementById('payment-modal').style.display = "inline"
 }
+

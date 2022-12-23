@@ -21,6 +21,7 @@ h1 {
     left: 10px;
 }
 
+
 hr {
     width: 508px;
     border-top: 1px solid black;
@@ -168,25 +169,64 @@ font-weight: 600;
 /* Payment Modal */
 
 .payment-modal {
-    display: none;
-    width: 524px;
-    height: 542px;
+    display:none;
+    width: 450px;
+    height: 450px;
     position: fixed;
     margin: auto;
-    background-color: yellow;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     text-align: center;
     border-radius: 5px;
-    background-color: white;
+    box-shadow: 0px 0px 10px black;
+    mix-blend-mode: passthrough;
+   
 }
 
 .modal-close-btn{
-    margin-right: 500px;
+    margin-right: -428px;
+    background-color: black;
+    color: #fff;
+    border: none;
 }
 
-.modal-inner{
+.modal-close-btn:hover{
+    color: red;
+}
+
+
+.modal-inner h2 {
     color: black;
+    margin: 30px auto 15px auto;
+    font-size: 25px;
+}
+
+.modal-inner {
+    width: 400px;
+    margin: 0px auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+.pay-btn {
+    width: 350px;
+    height: 50px;
+    margin: 20px auto 0px auto;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #757575;
+}
+
+.pay-btn{
+    margin-top: 20px;
+    width: 357px;
+    background-color: #16DB99;
+    color: #fff;
+    border: none;
 }
