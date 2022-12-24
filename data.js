@@ -14,7 +14,7 @@ export const menuArray = [
         id: 1,
     },
     {
-        name: "Tacos",
+        name: "Bean Burrito",
         ingredients: ["brown-rice, pinto-beans, mixed-greens"],
         price: 9,
         emoji: "🌯",
