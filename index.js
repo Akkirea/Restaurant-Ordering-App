@@ -14,8 +14,8 @@ document.addEventListener('click', function(e){
         openPaymentModal()
 
     } else if (e.target.id === 'modal-close-btn') {
-        document.getElementById('payment-modal').style.display = "none"
-    }
+        closeModal()
+    } 
 })
 
 // Get menu from /Data.js and create HTML 
@@ -131,4 +131,30 @@ if (orderArray.length === 0){
 function openPaymentModal(){
 document.getElementById('payment-modal').style.display = "inline"
 }
+
+function closeModal() {
+    document.getElementById('payment-modal').style.display = "none"
+}
+
+// Submit Form
+
+const paymentForm = document.getElementById('payment-form')
+
+
+paymentForm.addEventListener('submit', function(e){
+    e.preventDefault()
+    document.getElementById('payment-modal').style.display = "none"
+
+    const paymentFormData = new FormData(paymentForm)
+    let clientName = paymentFormData.get('clientName')
+
+    setTimeout(function(){
+        document.getElementById('order-container').innerHTML = 
+        `
+        <h2 class="message"> Thanks <span>${clientName}</span>, your order is on its way! </h2>`
+
+    }, 300)
+    
+})
+
 

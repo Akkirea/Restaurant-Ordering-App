@@ -31,18 +31,36 @@
                 <div class="modal-inner" id="modal-inner">
                     <h2>Payment</h2>
 
-                    <form> 
-                        <input type="text" name="fullName" placeholder="Enter your full name">
-                        <input type="text" name="cardNumber" placeholder="Enter your card number">
-                        <input type="text" name="cvv" placeholder="Enter your CVV">
-                    </form>
+                    <form id="payment-form"> 
+                        <input 
+                        type="text" 
+                        name="clientName" 
+                        aria-label="clientName"
+                        placeholder="Enter your full name" 
+                        id="clientName" 
+                        required>
 
-                    <button class="pay-btn" id="pay-btn">Pay</button>
-                </div>
+                        <input 
+                        type="text" 
+                        name="cardNumber" 
+                        aria-label="card Number" 
+                        placeholder="Enter your card number" 
+                        required>
 
+                        <input 
+                        type="text" 
+                        name="cvv" 
+                        placeholder="Enter your CVV" 
+                        aria-label="cvv" 
+                        required>
+                    
+
+                    <button type="submit" class="pay-btn" id="pay-btn">Pay</button>
+                </form>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
+</div>
     <script src="/index.js" type="module"></script>
 </body>
 </html>
