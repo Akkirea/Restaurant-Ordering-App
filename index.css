@@ -21,7 +21,6 @@ h1 {
     left: 10px;
 }
 
-
 hr {
     border-top: 1px solid black;
     border-bottom: none;
@@ -31,7 +30,7 @@ hr {
 /* Header */
 
 .container {
-    margin: 0px auto;
+    margin: 0 auto;
     width: 600px;
     position: relative;
 }
@@ -61,11 +60,10 @@ hr {
 }
 
 .product-name {
-    margin: 15px 0px 5px 0px;
+    margin: 15px 0 5px 0;
     font-size: 25px;
     color: black;
     font-weight: 400;
-
 }
 
 .product-ingredients {
@@ -133,7 +131,6 @@ font-weight: 600;
 
 .order-price{
     margin: 0px 0px 7px auto;
-
 }
 
 /* Total Price */
@@ -143,7 +140,6 @@ font-weight: 600;
     display: flex;
     justify-content: space-between;
 }
-
 
 .order-btn{
     height: 60px;
@@ -177,7 +173,6 @@ font-weight: 600;
     border-radius: 5px;
     box-shadow: 0px 0px 10px black;
     mix-blend-mode: passthrough;
-   
 }
 
 .modal-close-btn{
