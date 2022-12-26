@@ -36,8 +36,8 @@ hr {
 }
 
 .header-container{
+    background-image: url(images/header.jpg);
     height: 167px;
-    background-image: url("images/header.jpg");
     background-position: bottom;
     opacity: 93%;
 }
